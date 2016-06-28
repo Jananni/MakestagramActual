@@ -1,5 +1,7 @@
 import UIKit
 
+var photoTakingHelper: PhotoTakingHelper?
+
 class TimelineViewController: UIViewController {
 
    override func viewDidLoad() {
@@ -15,10 +17,17 @@ extension TimelineViewController: UITabBarControllerDelegate {
 
    func tabBarController(tabBarController: UITabBarController, shouldSelectViewController viewController: UIViewController) -> Bool {
       if (viewController is PhotoViewController) {
-         print("Take Photo")
+         takePhoto()
          return false
       } else {
          return true
+      }
+   }
+
+   func takePhoto() {
+      // instantiate photo taking class, provide callback for when photo is selected
+      photoTakingHelper = PhotoTakingHelper(viewController: self.tabBarController!) { (image: UIImage?) in
+         // don't do anything, yet...
       }
    }
 }
