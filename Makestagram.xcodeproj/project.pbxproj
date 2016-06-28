@@ -37,6 +37,7 @@
 		F53F84131D2204F3005974EA /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53F84121D2204F3005974EA /* PhotoViewController.swift */; };
 		F53F84151D220507005974EA /* FriendSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53F84141D220507005974EA /* FriendSearchViewController.swift */; };
 		F53F84181D22071D005974EA /* PhotoTakingHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53F84171D22071D005974EA /* PhotoTakingHelper.swift */; };
+		F53F841C1D220C0D005974EA /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53F841B1D220C0D005974EA /* Post.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +103,7 @@
 		F53F84121D2204F3005974EA /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		F53F84141D220507005974EA /* FriendSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendSearchViewController.swift; sourceTree = "<group>"; };
 		F53F84171D22071D005974EA /* PhotoTakingHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoTakingHelper.swift; sourceTree = "<group>"; };
+		F53F841B1D220C0D005974EA /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,6 +218,7 @@
 		62C8C1E21B06BD6500DC3EA7 /* Makestagram */ = {
 			isa = PBXGroup;
 			children = (
+				F53F841A1D220BEF005974EA /* Models */,
 				F53F84161D2206D8005974EA /* PhotoTaking */,
 				6277189C1B0A58E800AF5C6E /* Helpers */,
 				627718811B0A581600AF5C6E /* ViewControllers */,
@@ -271,6 +274,14 @@
 				F53F84171D22071D005974EA /* PhotoTakingHelper.swift */,
 			);
 			path = PhotoTaking;
+			sourceTree = "<group>";
+		};
+		F53F841A1D220BEF005974EA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F53F841B1D220C0D005974EA /* Post.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -482,6 +493,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				627718901B0A581600AF5C6E /* Filter.swift in Sources */,
+				F53F841C1D220C0D005974EA /* Post.swift in Sources */,
 				F53F84151D220507005974EA /* FriendSearchViewController.swift in Sources */,
 				627718A01B0A58E800AF5C6E /* ParseLoginHelper.swift in Sources */,
 				627718911B0A581700AF5C6E /* FilterCollectionViewCell.swift in Sources */,
