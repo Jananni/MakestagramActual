@@ -9,7 +9,6 @@
 import Foundation
 import Parse
 
-// 1
 class ParseHelper {
 
    // Following Relation
@@ -33,11 +32,10 @@ class ParseHelper {
 
    // User Relation
    static let ParseUserUsername      = "username"
-   
-   // ...
 
 
-   static func timelineRequestForCurrentUser(completionBlock: PFQueryArrayResultBlock) {
+
+   static func timelineRequestForCurrentUser(range: Range<Int>, completionBlock: PFQueryArrayResultBlock) {
       let followingQuery = PFQuery(className: ParseFollowClass)
       followingQuery.whereKey(ParseFollowFromUser, equalTo:PFUser.currentUser()!)
 
@@ -50,6 +48,11 @@ class ParseHelper {
       let query = PFQuery.orQueryWithSubqueries([postsFromFollowedUsers!, postsFromThisUser!])
       query.includeKey(ParsePostUser)
       query.orderByDescending(ParsePostCreatedAt)
+
+      // 2
+      query.skip = range.startIndex
+      // 3
+      query.limit = range.endIndex - range.startIndex
 
       query.findObjectsInBackgroundWithBlock(completionBlock)
    }
@@ -78,7 +81,6 @@ class ParseHelper {
       }
    }
 
-   // 1
    static func likesForPost(post: Post, completionBlock: PFQueryArrayResultBlock) {
       let query = PFQuery(className: ParseLikeClass)
       query.whereKey(ParseLikeToPost, equalTo: post)
@@ -87,5 +89,16 @@ class ParseHelper {
 
       query.findObjectsInBackgroundWithBlock(completionBlock)
    }
-   
+}
+
+extension PFObject {
+
+   public override func isEqual(object: AnyObject?) -> Bool {
+      if (object as? PFObject)?.objectId == self.objectId {
+         return true
+      } else {
+         return super.isEqual(object)
+      }
+   }
+
 }

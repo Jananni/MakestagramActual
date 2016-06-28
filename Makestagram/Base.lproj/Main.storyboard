@@ -98,8 +98,8 @@
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="20" id="uAX-OB-1lK"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Jf-6W-BNR">
-                                                    <rect key="frame" x="64" y="373" width="42" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="blah" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Jf-6W-BNR">
+                                                    <rect key="frame" x="60" y="374" width="532" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="5j2-ZF-QdO"/>
                                                     </constraints>
@@ -114,11 +114,11 @@
                                                 <constraint firstAttribute="trailingMargin" secondItem="H8s-O4-GxZ" secondAttribute="trailing" constant="4" id="QkB-vj-gIZ"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="H8s-O4-GxZ" secondAttribute="bottom" constant="16" id="Sqq-mp-1i1"/>
                                                 <constraint firstAttribute="bottom" secondItem="Emz-PR-s67" secondAttribute="bottom" constant="158" id="Xui-C2-5IE"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="4Jf-6W-BNR" secondAttribute="trailing" constant="486" id="bwE-Bd-4Ns"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="4Jf-6W-BNR" secondAttribute="trailing" id="bwE-Bd-4Ns"/>
                                                 <constraint firstItem="7EV-Qd-0Hd" firstAttribute="leading" secondItem="Xna-xa-jaZ" secondAttribute="leadingMargin" id="fis-Mh-aO3"/>
                                                 <constraint firstItem="h1T-oI-RaS" firstAttribute="top" secondItem="Emz-PR-s67" secondAttribute="bottom" constant="30" id="hdB-3L-wfz"/>
                                                 <constraint firstItem="Emz-PR-s67" firstAttribute="top" secondItem="Xna-xa-jaZ" secondAttribute="top" id="n5G-LO-sGI"/>
-                                                <constraint firstItem="7EV-Qd-0Hd" firstAttribute="top" secondItem="4Jf-6W-BNR" secondAttribute="bottom" constant="20" id="pLX-kG-gGx"/>
+                                                <constraint firstItem="7EV-Qd-0Hd" firstAttribute="top" secondItem="4Jf-6W-BNR" secondAttribute="bottom" constant="12" id="pLX-kG-gGx"/>
                                                 <constraint firstItem="Emz-PR-s67" firstAttribute="leading" secondItem="Xna-xa-jaZ" secondAttribute="leading" id="prX-rF-Y6a"/>
                                                 <constraint firstItem="Emz-PR-s67" firstAttribute="top" secondItem="Xna-xa-jaZ" secondAttribute="topMargin" id="rg3-cY-Z0e"/>
                                                 <constraint firstAttribute="trailing" secondItem="Emz-PR-s67" secondAttribute="trailing" id="tkX-gu-Dj0"/>
@@ -136,7 +136,7 @@
                                         <connections>
                                             <outlet property="likeButton" destination="H8s-O4-GxZ" id="Y3i-7s-oT2"/>
                                             <outlet property="likesIconImageView" destination="h1T-oI-RaS" id="19p-7A-gPw"/>
-                                            <outlet property="likesLabel" destination="4Jf-6W-BNR" id="Fe8-MW-N6d"/>
+                                            <outlet property="likesLabel" destination="4Jf-6W-BNR" id="yOq-Zw-vOa"/>
                                             <outlet property="moreButton" destination="7EV-Qd-0Hd" id="MaE-1H-cTq"/>
                                             <outlet property="postImageView" destination="Emz-PR-s67" id="i0z-xc-r8q"/>
                                         </connections>

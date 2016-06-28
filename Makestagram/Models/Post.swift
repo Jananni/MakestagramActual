@@ -21,6 +21,7 @@ class Post : PFObject, PFSubclassing {
    var photoUploadTask: UIBackgroundTaskIdentifier?
    var likes: Observable<[PFUser]?> = Observable(nil)
 
+
    //MARK: PFSubclassing Protocol
 
    // 3
