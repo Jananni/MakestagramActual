@@ -169,7 +169,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="KA9-fc-s9b">
             <objects>
-                <tabBarController id="YV9-1c-aRg" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBarController" id="YV9-1c-aRg" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="omB-9c-kGw">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -203,12 +203,15 @@
                                     <constraint firstAttribute="height" constant="44" id="bB7-SC-cVj"/>
                                 </constraints>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="zzl-u6-Xfp" id="ej2-Je-Mpl"/>
+                                </connections>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="50" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pHO-c4-CrH">
                                 <rect key="frame" x="0.0" y="64" width="600" height="487"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserCell" rowHeight="50" id="Z7w-Uf-GPh">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserCell" rowHeight="50" id="Z7w-Uf-GPh" customClass="FriendSearchTableViewCell" customModule="Makestagram" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="600" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Z7w-Uf-GPh" id="Ezo-Df-5Oh">
@@ -222,7 +225,7 @@
                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="2vn-xY-H6i"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bnJ-Gy-k89">
@@ -233,6 +236,9 @@
                                                     <inset key="contentEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
                                                     <state key="normal" image="add"/>
                                                     <state key="selected" image="check"/>
+                                                    <connections>
+                                                        <action selector="followButtonTapped:" destination="Z7w-Uf-GPh" eventType="touchUpInside" id="wQ8-7J-tAs"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -244,8 +250,15 @@
                                                 <constraint firstItem="Y46-vP-9nz" firstAttribute="leading" secondItem="Ezo-Df-5Oh" secondAttribute="leadingMargin" constant="12" id="jd7-ny-ta6"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="followButton" destination="bnJ-Gy-k89" id="qsA-qh-Gtd"/>
+                                            <outlet property="usernameLabel" destination="Y46-vP-9nz" id="lb0-XE-a8z"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="zzl-u6-Xfp" id="HF4-Sl-oy6"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -262,6 +275,10 @@
                     <tabBarItem key="tabBarItem" title="" image="people" id="CmB-td-72A">
                         <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
                     </tabBarItem>
+                    <connections>
+                        <outlet property="searchBar" destination="Yvd-3W-qLH" id="R73-fn-Hdw"/>
+                        <outlet property="tableView" destination="pHO-c4-CrH" id="Gug-Sj-Eui"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kKg-SZ-wGU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
